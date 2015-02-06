@@ -17,9 +17,9 @@ import org.usfirst.frc1073.tankDriveBot2015.Robot;
 /**
  *
  */
-public class  TestPiston extends Command {
+public class  TestLower extends Command {
 
-    public TestPiston() {
+    public TestLower() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
 
@@ -31,16 +31,20 @@ public class  TestPiston extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.testPistonSubsystem.testThePiston();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	//this is to lower the elevator, this will reset WasPressed so testPiston can be run again
+    	if(!Robot.testPistonSubsystem.getWasPassed()){
+    		Robot.testPistonSubsystem.setWasPassed(true);
+    	}
+    	Robot.testPistonSubsystem.lower();
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return true;
     }
 
     // Called once after isFinished returns true

@@ -65,7 +65,13 @@ public class OI {
 
 	    
         // SmartDashboard Buttons
-        SmartDashboard.putData("TestPiston", new TestPiston());
+        SmartDashboard.putData("TestLift", new TestLift());
+
+        SmartDashboard.putData("TestStop", new TestStop());
+
+        SmartDashboard.putData("TestLower", new TestLower());
+
+        SmartDashboard.putData("TestThePiston", new TestThePiston());
 
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
 

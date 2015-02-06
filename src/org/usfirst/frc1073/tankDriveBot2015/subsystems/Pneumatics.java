@@ -47,7 +47,8 @@ public class Pneumatics extends Subsystem {
     	doubleSolenoidTwo.set(Value.kOff);
     	solenoidOne.set(false);
     	solenoidTwo.set(false);
-    	Robot.testPistonSubsystem.testPistonDoubleSolenoid.set(Value.kOff);
+    	Robot.testPistonSubsystem.testCompressorSolenoid.set(true);
+    	Robot.testPistonSubsystem.testExhaustSolenoid.set(false);
     }
     
     public void initDefaultCommand() {

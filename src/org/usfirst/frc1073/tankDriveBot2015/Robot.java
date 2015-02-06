@@ -15,6 +15,8 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import org.usfirst.frc1073.tankDriveBot2015.commands.*;
 import org.usfirst.frc1073.tankDriveBot2015.subsystems.*;
 
@@ -93,6 +95,7 @@ public class Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
+        pneumatics.setAllClosed();
     }
 
     /**
@@ -100,6 +103,7 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putBoolean("Mag is", testPistonSubsystem.getTestMag());
     }
 
     /**
