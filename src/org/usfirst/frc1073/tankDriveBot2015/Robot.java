@@ -104,6 +104,7 @@ public class Robot extends IterativeRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
         SmartDashboard.putBoolean("Mag is", testPistonSubsystem.getTestMag());
+        SmartDashboard.putString("The State of the elevator is: ", testPistonSubsystem.getState());
     }
 
     /**

@@ -30,7 +30,7 @@ public class TestPistonSubsystem extends Subsystem {
     private final boolean OPEN = true;
     private final boolean CLOSE = false;
     private boolean wasPassed = true;
-    private String state;
+    private String state = "stopped.";
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
@@ -47,17 +47,18 @@ public class TestPistonSubsystem extends Subsystem {
     
     // method for lifting
     public void lift(){
-    	testExhaustSolenoid.set(OPEN);
-    	testCompressorSolenoid.set(CLOSE);
-    	state = "lifting.";
+    	testExhaustSolenoid.set(CLOSE);
+    	testCompressorSolenoid.set(OPEN);
+    	state = "lifting...";
     }
     
     // method for hold stopping which means it can stop in any location on the piston
     public void holdStop(){
     	testExhaustSolenoid.set(CLOSE);
-    	testCompressorSolenoid.set(OPEN);
+    	testCompressorSolenoid.set(CLOSE);
     	state = "stopped.";
     }
+    
     
     // method for lowering 
     public void lower(){

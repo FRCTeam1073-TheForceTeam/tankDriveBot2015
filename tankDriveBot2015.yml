@@ -18,7 +18,7 @@ Children:
           default: '0'
           name: Output PCM (Solenoid)
           validators: &id004 [Solenoid]
-          value: '0'
+          value: '1'
       Base: Solenoid
       Name: testCompressorSolenoid
     - Children: []
@@ -34,7 +34,7 @@ Children:
           default: '0'
           name: Output PCM (Solenoid)
           validators: *id004
-          value: '0'
+          value: '1'
       Base: Solenoid
       Name: testExhaustSolenoid
     - Children: []
@@ -76,7 +76,7 @@ Children:
           default: '0'
           name: Reverse Channel (Solenoid)
           validators: &id010 [Solenoid]
-          value: '6'
+          value: '0'
         Forward Channel (Solenoid): !!robotbuilder.data.properties.ChoicesProperty
           choices: &id011 ['0', '1', '2', '3', '4', '5', '6', '7']
           default: '0'
@@ -333,7 +333,7 @@ Children:
   Base: Commands
   Name: Commands
 Properties:
-  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\team1073\workspace',
+  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: /Users/nnapior/workspace,
     extension: null, folder: true, name: Eclipse Workspace, validators: null, value: ../}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
