@@ -11,7 +11,7 @@ Children:
           default: '0'
           name: Output Channel (Solenoid)
           validators: &id002 [Solenoid]
-          value: '0'
+          value: '7'
         Output PCM (Solenoid): !!robotbuilder.data.properties.ChoicesProperty
           choices: &id003 ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
             '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
@@ -28,7 +28,7 @@ Children:
           default: '0'
           name: Output Channel (Solenoid)
           validators: *id002
-          value: '7'
+          value: '6'
         Output PCM (Solenoid): !!robotbuilder.data.properties.ChoicesProperty
           choices: *id003
           default: '0'
@@ -333,7 +333,7 @@ Children:
   Base: Commands
   Name: Commands
 Properties:
-  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: /Users/nnapior/workspace,
+  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\team1073\workspace',
     extension: null, folder: true, name: Eclipse Workspace, validators: null, value: ../}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
